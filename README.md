@@ -4,7 +4,7 @@ Este proyecto es un script de Python que extrae texto de archivos PDF. Su princi
 
 El script puede procesar un único archivo PDF o una carpeta completa de archivos PDF, generando un archivo .txt por cada documento procesado.
 
---
+---
 
 ## Características
 
