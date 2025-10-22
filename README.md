@@ -4,6 +4,8 @@ Este proyecto es un script de Python que extrae texto de archivos PDF. Su princi
 
 El script puede procesar un único archivo PDF o una carpeta completa de archivos PDF, generando un archivo .txt por cada documento procesado.
 
+--
+
 ## Características
 
 - **Extracción Híbrida:** Combina la extracción de texto digital (usando PyMuPDF) con el Reconocimiento Óptico de Caracteres (usando Tesseract) para una cobertura completa.
@@ -14,6 +16,8 @@ El script puede procesar un único archivo PDF o una carpeta completa de archivo
 
 - **Contenerizado:** Incluye un Dockerfile para construir y ejecutar la aplicación en un entorno aislado sin necesidad de instalar dependencias localmente.
 
+--
+
 ## Archivos del Proyecto
 
 - `main.py`: El script principal de Python que contiene toda la lógica de extracción.
@@ -21,6 +25,8 @@ El script puede procesar un único archivo PDF o una carpeta completa de archivo
 - `requirements.txt`: La lista de dependencias de Python.
 
 - `Dockerfile`: El archivo de configuración para construir la imagen de Docker.
+
+--
 
 ## Requisitos y Configuración
 
@@ -77,6 +83,8 @@ Pillow
 
 Esta es la forma más fácil, ya que todas las dependencias (Python y Tesseract) se instalan dentro del contenedor.
 
+--
+
 ## Uso
 
 ### Uso Local
@@ -124,6 +132,8 @@ docker run --rm -v "./mis_pdfs":/mis_pdfs ocr-extractor /mis_psfs/mi_archivo_esp
 ```
 Al terminar, los archivos .txt con el texto extraído aparecerán en tu carpeta local mis_pdfs.
 
+--
+
 ## Configuración del Idioma
 
 Por defecto, el script está configurado para usar el idioma español (lang="spa") para el OCR.
@@ -133,3 +143,9 @@ Si necesitas procesar PDFs en otro idioma (ej. inglés):
 - En `main.py`: Cambia la línea `texto_imagen = pytesseract.image_to_string(...)` para que use `lang="eng"`.
 
 - En `dockerfile`: Añade el paquete de idioma correspondiente, por ejemplo `tesseract-ocr-eng`, a la lista `apt-get install`.
+
+--
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
