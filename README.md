@@ -16,7 +16,7 @@ El script puede procesar un único archivo PDF o una carpeta completa de archivo
 
 - **Contenerizado:** Incluye un Dockerfile para construir y ejecutar la aplicación en un entorno aislado sin necesidad de instalar dependencias localmente.
 
---
+---
 
 ## Archivos del Proyecto
 
@@ -26,7 +26,7 @@ El script puede procesar un único archivo PDF o una carpeta completa de archivo
 
 - `Dockerfile`: El archivo de configuración para construir la imagen de Docker.
 
---
+---
 
 ## Requisitos y Configuración
 
@@ -83,7 +83,7 @@ Pillow
 
 Esta es la forma más fácil, ya que todas las dependencias (Python y Tesseract) se instalan dentro del contenedor.
 
---
+---
 
 ## Uso
 
@@ -132,7 +132,7 @@ docker run --rm -v "./mis_pdfs":/mis_pdfs ocr-extractor /mis_psfs/mi_archivo_esp
 ```
 Al terminar, los archivos .txt con el texto extraído aparecerán en tu carpeta local mis_pdfs.
 
---
+---
 
 ## Configuración del Idioma
 
@@ -144,7 +144,7 @@ Si necesitas procesar PDFs en otro idioma (ej. inglés):
 
 - En `dockerfile`: Añade el paquete de idioma correspondiente, por ejemplo `tesseract-ocr-eng`, a la lista `apt-get install`.
 
---
+---
 
 ## Licencia
 
